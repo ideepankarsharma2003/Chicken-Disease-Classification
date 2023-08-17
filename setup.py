@@ -13,7 +13,7 @@ AUTHOR_EMAIL= "deepankarsharma2003@gmail.com"
 
 
 setuptools.setup(
-    name="Chicken-Disease-Classification",
+    name=SRC_REPOSITORY,
     version=__version__,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
