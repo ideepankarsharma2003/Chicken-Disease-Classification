@@ -5,7 +5,8 @@ from ChickenDiseaseClassifier.entity.config_entity import (
                                                             DataIngestionConfig, 
                                                             PrepareBaseModelConfig,
                                                             PrepareCallbacksConfig,
-                                                            TrainingConfig
+                                                            TrainingConfig,
+                                                            EvaluationConfig
                                                         )
 
 class ConfigurationManager:
@@ -114,3 +115,22 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+
+
+
+
+    
+
+    # evaluation config
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config= EvaluationConfig(
+            path= Path("artifacts/training/model.h5"),
+            training_data= Path("artifacts/data_ingestion/Chicken-fecal-images/"),
+            all_parameters= self.params,
+            params_image_size= self.params.IMAGE_SIZE,
+            params_batch_size= self.params.BATCH_SIZE,
+            
+        )
+        return eval_config
+        
