@@ -3,7 +3,7 @@ AUGUMENTATION: True
 IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
 BATCH_SIZE: 32
 INCLUDE_TOP: False
-EPOCHS: 10 # 100 kr lena baad m
+EPOCHS: 1 # 100 kr lena baad m
 CLASSES: 2
 WEIGHTS: imagenet
 LEARNING_RATE: 0.01

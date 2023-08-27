@@ -27,3 +27,14 @@ class ModelTrainingPipeline:
         training.train(
             callbacks_list=callback_list
         )
+
+
+if __name__ == '__main__':
+    try: 
+        logger.info(f'{">"*5}\t stage: {STAGE_NAME} started. \t{">"*5}')
+        obj= ModelTrainingPipeline()
+        obj.run()
+        logger.info(f'{">"*5}\t stage: {STAGE_NAME} completed. \t{">"*5}')
+    except Exception as e:
+        # logger.error(f'{">"*5}\t stage: {STAGE_NAME} failed. \t{">"*5}')
+        logger.exception(e)

@@ -1,6 +1,6 @@
 stages:
   data_ingestion:
-    cmd: src/ChickenDiseaseClassifier/pipeline/stage_01_dataingestion.py
+    cmd: python src/ChickenDiseaseClassifier/pipeline/stage_01_dataingestion.py
     deps:
       - src/ChickenDiseaseClassifier/pipeline/stage_01_dataingestion.py
       - config/config.yaml
@@ -14,7 +14,7 @@ stages:
 
 
   prepare_base_model:
-    cmd: src/ChickenDiseaseClassifier/pipeline/stage_02_prepare_base_model.py
+    cmd: python src/ChickenDiseaseClassifier/pipeline/stage_02_prepare_base_model.py
     deps:
       - src/ChickenDiseaseClassifier/pipeline/stage_02_prepare_base_model.py
       - config/config.yaml
@@ -34,7 +34,7 @@ stages:
 
 
   training:
-    cmd: src/ChickenDiseaseClassifier/pipeline/stage_03_training.py
+    cmd: python src/ChickenDiseaseClassifier/pipeline/stage_03_training.py
     deps:
       - src/ChickenDiseaseClassifier/pipeline/stage_03_training.py
       - src/ChickenDiseaseClassifier/components/prepare_callbacks.py
@@ -57,7 +57,7 @@ stages:
 
   
   evaluation:
-    cmd: src/ChickenDiseaseClassifier/pipeline/stage_04_model_evaluation.py
+    cmd: python src/ChickenDiseaseClassifier/pipeline/stage_04_model_evaluation.py
     deps:
       - src/ChickenDiseaseClassifier/pipeline/stage_04_model_evaluation.py
       - config/config.yaml

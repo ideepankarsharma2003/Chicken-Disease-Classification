@@ -49,8 +49,8 @@ STAGE_NAME= 'Model Training'
 try: 
     logger.info(f'{">"*5}\t stage: {STAGE_NAME} started. \t{">"*5}')
     obj= ModelTrainingPipeline()
-    # obj.run()
-    logger.info('Model Training p comment mara hai, check kr lena')
+    obj.run()
+    # logger.info('Model Training p comment mara hai, check kr lena')
     logger.info(f'{">"*5}\t stage: {STAGE_NAME} completed. \t{">"*5}')
 except Exception as e:
     # logger.error(f'{">"*5}\t stage: {STAGE_NAME} failed. \t{">"*5}')
